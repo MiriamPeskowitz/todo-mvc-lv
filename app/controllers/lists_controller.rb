@@ -10,7 +10,8 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
-    @item = @list.items.build
+    @item = Item.new
+    # @item = @list.items.build
   end
 
   def create
@@ -23,6 +24,10 @@ class ListsController < ApplicationController
       render :index
     end 
   end
+
+  def update
+    raise params.inspect
+  end 
 
   private
 
