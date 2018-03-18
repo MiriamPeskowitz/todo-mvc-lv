@@ -1,0 +1,1 @@
+Views should have no logic -- move it to the helpers 

@@ -3301,3 +3301,29 @@ Processing by ListsController#show as HTML
   [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 2]]
   Rendered lists/show.html.erb within layouts/application (18.2ms)
 Completed 200 OK in 87ms (Views: 75.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists" for ::1 at 2018-03-02 16:05:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListsController#index as HTML
+  [1m[35mList Load (0.5ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 449ms (Views: 415.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/lists/1" for ::1 at 2018-03-02 16:05:20 -0500
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (2.7ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered lists/show.html.erb within layouts/application (79.4ms)
+Completed 200 OK in 198ms (Views: 103.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/lists/1" for ::1 at 2018-03-02 16:07:08 -0500
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.5ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered lists/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 91ms (Views: 53.4ms | ActiveRecord: 1.8ms)

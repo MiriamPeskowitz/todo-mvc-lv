@@ -26,7 +26,7 @@ class ListsController < ApplicationController
   end
 
   def update
-    raise params.inspect
+    
   end 
 
   private
