@@ -1,0 +1,21 @@
+ <% form_for(@list, @item) do |f| %>
+      
+      <%= f.text_field :description, :class => "new-todo", :placeholder => (@item.errors.full_messages_for(:description).first || "Enter a new line...") %>
+
+      <%= f.submit :style => "display: none" %>
+    <% end %>
+
+    put lists/:list_id/items/:id
+    put lists/1/item/1
+
+    grab HTML from other pages 
+
+    add status 0-complete, 1 incomplete 
+
+    completed class -
+
+    build boolean methods 
+
+    checkbox -- if not checked, the browser won't see it. 
+    
+    
